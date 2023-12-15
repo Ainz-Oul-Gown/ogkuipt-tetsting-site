@@ -1,0 +1,171 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    min-height:40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    min-height: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    align-items: center;
+}
+
+    .nav-list.show {
+        max-height: 200px; /* Высота списка после показа */
+    }
+
+.nav-link {
+    padding: 14px 16px;
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+    .nav-link:hover {
+        background-color: #555;
+    }
+
+
+.ham {
+    display:none;
+}
+
+main {
+    position: absolute;
+
+    width: 100%;
+    top: 40px;
+    overflow: hidden;
+}
+
+
+/* Скрыть список пунктов меню к началу */
+
+@media (max-width: 900px) {
+    .nav-link{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    main {
+        position: absolute;
+
+        width: 100%;
+        top: 80px;
+        z-index:-1;
+        overflow:hidden;
+    }
+
+
+    li {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .buttonn {
+        background-color: #333;
+        top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        margin-top: 80px;
+        min-height:0;
+        width:100%;
+    }
+
+    .ham {
+        display: flex;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .hamRotate.active {
+        transform: rotate(45deg);
+    }
+
+    .hamRotate180.active {
+        transform: rotate(180deg);
+    }
+
+    .line {
+        fill: none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke: white;
+        stroke-width: 5.5;
+        stroke-linecap: round;
+    }
+
+    .ham1 .top {
+        stroke-dasharray: 40 160;
+    }
+
+    .ham1 .middle {
+        stroke-dasharray: 40 142;
+        transform-origin: 50%;
+        transition: transform 400ms;
+    }
+
+    .ham1 .bottom {
+        stroke-dasharray: 40 85;
+        transform-origin: 50%;
+        transition: transform 400ms, stroke-dashoffset 400ms;
+    }
+
+    .ham1.active .top {
+        stroke-dashoffset: -64px;
+    }
+
+    .ham1.active .middle {
+        //stroke-dashoffset: -20px;
+        transform: rotate(90deg);
+    }
+
+    .ham1.active .bottom {
+        stroke-dashoffset: -64px;
+    }
+}
+
+
+

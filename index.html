@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты ОГКУиПТ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-list" id="expandableList">
+            <li><a href="#task1" class="nav-link" onclick="navigateTo(1)">Задание 1</a></li>
+            <li><a href="#task2" class="nav-link" onclick="navigateTo(2)">Задание 2</a></li>
+            <li><a href="#task3" class="nav-link" onclick="navigateTo(3)">Задание 3</a></li>
+            <li><a href="#task4" class="nav-link" onclick="navigateTo(4)">Задание 4</a></li>
+            <li><a href="#task5" class="nav-link" onclick="navigateTo(5)">Задание 5</a></li>
+            <li><a href="#task6" class="nav-link" onclick="navigateTo(6)">Задание 6</a></li>
+        </ul>
+            
+    </div>
+    <div class="buttonn">
+        <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80" onclick=" toggleMenu()">
+            <path class="line top"
+                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path class="line middle"
+                    d="m 30,50 h 40" />
+            <path class="line bottom"
+                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+    </div>
+    <main>
+        <div id="content">
+            <!-- Содержимое заданий будет загружаться сюда -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
